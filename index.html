@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini-vue2手写实现</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ str }}</h1>
+    {{str}}
+    <p>{{bbbb}}
+    </p>
+    <button @click="btn">btn</button>
+    <input type="" name="" v-model='str' id="ipt" />
+  </div>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript">
+
+
+    new Vue({
+      el: "#app",
+      data: {
+        str: "你好",
+        bbbb: "哈哈哈哈哈"
+      },
+      beforeCreate () {
+        // console.log("beforeCreate", this.$el, this.$data)
+      },
+      create () {
+        // console.log("create", this.$el, this.$data)
+      },
+      beforeMounted () {
+        // console.log("beforeMounted", this.$el, this.$data)
+      },
+      mounted () {
+        // console.log("mounted", this.$el, this.$data)
+      },
+      methods: {
+        btn (e) {
+          this.str = "不好了lalalllll"
+
+          // console.log(this, this.str)
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>
